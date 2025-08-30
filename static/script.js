@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         classifyBtn.disabled = true;
 
         try {
-            // Em ambiente de desenvolvimento, a URL é '/classify'
-            // A Vercel vai rotear isso corretamente para a função serverless
             const response = await fetch('/classify', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
