@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
 # Carrega os pipelines da Hugging Face
 try:
-    classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+    classifier = pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-3")
 except Exception as e:
     print(f"Erro ao carregar o modelo de classificação: {e}")
     classifier = None
